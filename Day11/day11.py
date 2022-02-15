@@ -250,4 +250,10 @@ def all_same_data_types(a_list):
             print("The list is not unique")
 all_same_data_types(['James', 1, 4.5, {"Name":"James"}])
 
-# day
+#4 checking if a variable is a valid python variable
+from keyword import iskeyword
+def is_valid_variable_name(name):
+    return name.isidentifier() and not iskeyword(name)
+name =10
+
+is_valid_variable_name("name")
