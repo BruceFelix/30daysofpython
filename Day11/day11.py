@@ -100,10 +100,120 @@ def reverse_list(list1):
         print(list1[i])
 print(reverse_list([1,2,3,4,5,6,7,8]))
 
-# capitalization of words
+#10 capitalization of words
 def capitalize_list_items(a_list):
-    for word in list:
-        word = word[0].upper() + word[1:]
-    print(a_list)
+    new_list = []
+    for word in a_list:
+        new_list.append(word.title())
+    print(new_list)
 
-capitalize_list_items(["Jeff", "Bruce"])
+capitalize_list_items(["jeff", "bruce", "james", "charles"])
+
+#11  adding items to list
+crops = ["beans", "maize", "rice"]
+def add_item(a_list, item):
+    a_list.append(item)
+    return a_list
+print(add_item(crops, "wheat"))
+
+#12 removing functions from a list
+crops = ["beans", "maize", "rice", "wheat"]
+def remove_item(a_list, item):
+    a_list.remove(item)
+    return a_list
+print(remove_item(crops, "wheat"))
+
+#13 sum of numbers
+def sum_of_numbers(number):
+    total = 0
+    for i in range(1, number + 1,):
+        total =total + i
+    print(total)
+sum_of_numbers(5)
+
+# 14 sum of odds
+def sum_of_odds(number):
+    total = 0
+    for i in range(1, number + 1):
+        if i % 2 != 0:
+            total = total + i
+    print(total)
+sum_of_odds(7)
+
+#15 sum of even numbers in a range of number
+def sum_of_even(number):
+    total = 0
+    for i in range(1, number + 1):
+        if i % 2 == 0:
+            total = total + i
+    print(total)
+sum_of_even(7) 
+
+# Exercises: Level 2
+# Function that returns the numbers of even and odd values in a number
+def evens_and_odds(number):
+    even =0
+    odd = 0
+    for i in range(number + 1):
+        if i % 2 == 0:
+            even = even + 1
+        else:
+            odd = odd + 1
+    print("The number of odds are",odd)
+    print("The number of evens are",even)
+while True:
+    number = int(input("Enter a positive number: "))
+    if number >= 0:
+        evens_and_odds(number)
+        break
+    else:
+        continue
+
+#2 factorial 
+def factorial(number):
+    factorial = 1
+    for i in range(1, number + 1):
+        factorial = factorial * i
+    print(factorial)
+factorial(10)
+
+#3 checks if empty
+def is_empty(para):
+    if not para:
+        print("Empty")
+    else:
+        print("Enter not empty")
+para = input("Enter something: ")
+is_empty(para)
+
+#4 takes a list and calculates the following functions
+#mean
+def calculate_mean(a_list):
+    total = 0
+    for value in a_list:
+        total =total + value
+    average = total // len(a_list)
+    print(average)
+calculate_mean([1,2,3,4,5,6,7,8])
+#median
+items = [6, 1, 8, 2, 3]
+def calculate_median(a_list):
+    import statistics
+    print(statistics.median(a_list))
+calculate_median(items)
+
+#range
+def calculate_range(a_list):
+    pass
+#variance
+
+# Exercises: Level 3
+#1 prime numbers
+def is_prime():
+    number = int(input("Enter the input Range : "))
+    for iter in range(1,number):
+        for i in range(2,iter):
+            if (iter%i==0):
+                break
+            else:
+                print(iter)
