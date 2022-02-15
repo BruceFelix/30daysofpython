@@ -217,3 +217,37 @@ def is_prime():
                 break
             else:
                 print(iter)
+
+#2 function to check if all items are unique in the list
+# initializing list 
+test_list = [1, 3, 4, 6, 7]
+def unique_list(a_list):  
+    print ("The original list is : " + str(a_list))
+    flag = 0
+    # using set() + len()
+    # to check all unique list elements
+    flag = len(set(a_list)) == len(a_list)
+    # printing result
+    if(flag) :
+        print ("List contains all unique elements")
+    else : 
+        print ("List contains does not contains all unique elements")
+  
+unique_list(test_list)
+
+#3 function to check if all the items are of the same data type
+def all_same_data_types(a_list):
+    for value in a_list:
+        if isinstance(value) == str:
+            print("The list is of type str")
+        elif isinstance(value) == int:
+            print("The list is of type str")
+        elif isinstance(value) == dict:
+            print("The list is of type str")
+        elif isinstance(value) == float:
+            print("The list is of type str")
+        else:      
+            print("The list is not unique")
+all_same_data_types(['James', 1, 4.5, {"Name":"James"}])
+
+# day
