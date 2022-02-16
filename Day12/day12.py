@@ -61,3 +61,17 @@ def hex_or_rgb():
     else:
         print("Invalid type of color")
 hex_or_rgb()
+
+#Exercises: Level 3
+# 1 shuffling a list
+my_list = [1,2,232.2,4,4,"James",6,7,"3434",34]
+def shuffle_list(a_list):
+    random.shuffle(a_list)
+    return a_list
+print(shuffle_list(my_list))
+
+#2 returns random numbers
+def random_seven():
+    random_numbers = set(random.sample("0123456789", 7))
+    print(list(random_numbers))
+random_seven()
