@@ -324,7 +324,7 @@ countries = [
   'Yemen',
   'Zambia',
   'Zimbabwe',
-];
+]
 countries.sort()
 middle_country = len(countries)//2
 print(countries[middle_country])
