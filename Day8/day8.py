@@ -50,6 +50,6 @@ print(student.items())
 del student['skills']
 
 #11 deleting one of the dictionaries
-del student['Address']
+del student
 
-print(student)
+# print(student) error because it is deleted

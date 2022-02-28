@@ -11,16 +11,16 @@ print(res)
 
 #3 
 company = "Coding For All"
-print(company)
-print(len(company))
-print(company.upper())
-print(company.lower())
-print(company.capitalize())
-print(company.title())
-print(company.swapcase())
-print(company[7:14])
-print(company.find("Coding"))
-print(company.replace('Coding', 'Python'))
+print(company) #4
+print(len(company)) #5
+print(company.upper()) #6
+print(company.lower()) #7
+print(company.capitalize()) #8
+print(company.title()) #8 
+print(company.swapcase()) #8
+print(company[7:14]) #9 
+print(company.find("Coding")) #10
+print(company.replace('Coding', 'Python')) # 11
 
 
 

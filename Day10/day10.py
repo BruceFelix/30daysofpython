@@ -254,7 +254,7 @@ countries = [
   'Yemen',
   'Zambia',
   'Zimbabwe',
-];
+]
 countries_with_land_in_their_name= []
 for country in countries:
     if "land" in country:
@@ -262,11 +262,11 @@ for country in countries:
 print(countries_with_land_in_their_name)
 
 #2 reverse the order using loop.
-revesed = []
+reversed = []
 my_list = ['banana', 'orange', 'mango', 'lemon']
 for fruit in my_list:
-    revesed.insert(0,fruit)
-print(revesed)
+    reversed.insert(0,fruit)
+print(reversed)
 
 #3 level 3
 # -->Go to the data folder and use the countries_data.py file.
