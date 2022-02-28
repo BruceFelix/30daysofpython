@@ -235,20 +235,20 @@ def unique_list(a_list):
   
 unique_list(test_list)
 
-#3 function to check if all the items are of the same data type
-def all_same_data_types(a_list):
-    for value in a_list:
-        if isinstance(value) == str:
-            print("The list is of type str")
-        elif isinstance(value) == int:
-            print("The list is of type str")
-        elif isinstance(value) == dict:
-            print("The list is of type str")
-        elif isinstance(value) == float:
-            print("The list is of type str")
-        else:      
-            print("The list is not unique")
-all_same_data_types(['James', 1, 4.5, {"Name":"James"}])
+# #3 function to check if all the items are of the same data type
+# def all_same_data_types(a_list):
+#     for value in a_list:
+#         if isinstance(value, str):
+#             print("The list is of type str")
+#         elif isinstance(value, int):
+#             print("The list is of type str")
+#         elif isinstance(value, dict):
+#             print("The list is of type str")
+#         elif isinstance(value, float):
+#             print("The list is of type str")
+#         else:      
+#             print("The list is not unique")
+# all_same_data_types(['James', 1, 4.5, {"Name":"James"}])
 
 #4 checking if a variable is a valid python variable
 from keyword import iskeyword
@@ -257,3 +257,4 @@ def is_valid_variable_name(name):
 name =10
 
 is_valid_variable_name("name")
+#5 sovled in day 10
