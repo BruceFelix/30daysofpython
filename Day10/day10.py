@@ -91,13 +91,25 @@ for dic in countries_data.countries:
 print(len(set(languages)))
 print(total_languages)
 
-# 10 most spoken languages in the world\
-result = {}
-for language in languages:
-    if languages.count(language) == 0:
-        result.keys = language
-        result.value = 1
-    else:
-        result.key = language
-        result.values = languages.count(language)
-print(result)
+#2 10 most spoken languages in the world\
+counts = {}
+
+for i in languages:
+    counts[i] = counts.get(i,0) + 1
+print(counts)
+langs_sorted = dict(sorted(counts.items(), key=lambda item: item[1],reverse=True))# sorts the dictionary using the values in descending order
+languages = list(langs_sorted.keys())
+countries = list(langs_sorted.values())
+for i in range(0,10):
+    print(f" {i+1} {languages[i]} in {countries[i]} countries")
+
+#3 10 most populated countries in the world
+countries_population = {}
+for my_dict in countries_data.countries:
+    countries_population[my_dict['name']] = my_dict['population']
+populations_sorted = dict(sorted(countries_population.items(), key= lambda item: item[1],reverse=True)) # sorts the dictionary using the values in descending order
+country_name = list(populations_sorted.keys())
+population = list(populations_sorted.values())
+
+for i in range(0,10):
+    print(f" {i+1} {population[i]} people in {country_name[i]} ")
