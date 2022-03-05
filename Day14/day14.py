@@ -110,8 +110,8 @@ def total(num):
     total = 0
     total += num
     return total
-numbers = [0,12,3,223,34,23,234,5,456,56,34]
-print(numbers.map(to_square).filter(is_even).reduce(total))
+mix_numbers = [0,12,3,223,34,23,234,5,456,56,34]
+print(mix_numbers.map(to_square).filter(is_even).reduce(total))
 # Didn't understand the question
 
 #9 Declare a function called get_string_lists which takes a list as a parameter and then returns
@@ -124,3 +124,14 @@ def get_string_lists(a_list):
     return new_list
 mixed_list = [1, "Jeff", 23.3, "Bruce", "james"]
 print(get_string_lists(mixed_list))
+
+#10 Use reduce to sum all the numbers in the numbers list.
+from functools import reduce
+def reduce_sum(x, y):
+    return x + y
+result_sum = reduce(reduce_sum, numbers)
+print(result_sum)
+
+#11Use reduce to concatenate all the countries and to produce
+#this sentence: Estonia, Finland, Sweden, Denmark, Norway, and
+#Iceland are north European countries 
