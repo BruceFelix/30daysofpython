@@ -75,3 +75,52 @@ def countries_with_land(country):
     return False
 land_countries = filter(countries_with_land, countries)
 print(list(land_countries))
+
+#5 Use filter to filter out countries having exactly six characters.
+countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+def six_letters(country):
+    if len(country) == 6:
+        return True
+    return False
+six_letter_countries = filter(six_letters, countries)
+print(list(six_letter_countries))
+
+#6 Use filter to filter out countries containing six letters and more in the country list.
+def greater_than_six(country):
+    if len(country) >= 6:
+        return True
+    return False
+countries_greater_than_six = filter(greater_than_six, countries) 
+print(list(countries_greater_than_six))
+
+#7 Use filter to filter out countries starting with an 'E'
+def starts_with_E(country):
+    if country.startswith('E'):
+        return True
+    return False
+countries_start_with_E = filter(starts_with_E, countries)
+print(list(countries_start_with_E))
+
+#8 Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    return True
+def total(num):
+    total = 0
+    total += num
+    return total
+numbers = [0,12,3,223,34,23,234,5,456,56,34]
+print(numbers.map(to_square).filter(is_even).reduce(total))
+# Didn't understand the question
+
+#9 Declare a function called get_string_lists which takes a list as a parameter and then returns
+#  a list containing only string items.
+def get_string_lists(a_list):
+    new_list = []
+    for value in a_list:
+        if isinstance(value, str):
+            new_list.append(value)
+    return new_list
+mixed_list = [1, "Jeff", 23.3, "Bruce", "james"]
+print(get_string_lists(mixed_list))
