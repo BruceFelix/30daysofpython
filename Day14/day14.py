@@ -135,3 +135,56 @@ print(result_sum)
 #11Use reduce to concatenate all the countries and to produce
 #this sentence: Estonia, Finland, Sweden, Denmark, Norway, and
 #Iceland are north European countries 
+from functools import reduce
+countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+european = lambda x,y : f"{x}, {y}"
+print(reduce(european,countries),"are North European countries")
+
+
+#12 Declare a function called categorize_countries that returns a list of 
+#countries with some common pattern (you can find the countries list in this
+#repository as countries.js(eg 'land', 'ia', 'island', 'stan')).
+from Day10 import countries
+
+countries_land = []
+countries_ia = []
+countries_island = []
+countries_stan = []
+def categorize_countries():
+    for country in countries.countries:
+        if 'land' in country:
+            countries_land.append(country)
+        elif 'ia' in country:
+            countries_ia.append(country)
+        elif 'island' in country:
+            countries_island.append(country)
+        elif 'stan' in country:
+            countries_stan.append(country)
+    print(f"Countries with 'land' are: {countries_land}")
+    print(f"Countries with 'ia' are: {countries_ia}")
+    print(f"Countries with 'island' are: {countries_island}")
+    print(f"Countries with 'stan' are: {countries_stan}")
+
+categorize_countries()
+
+#13Create a function returning a dictionary, where keys stand for starting letters 
+#of countries and values are the number of country names starting with that letter.
+my_dic = {}
+def letter_values():
+    for country in countries.countries:
+        my_dic[country[0]] = my_dic.get(country[0],0) + 1
+    print(my_dic)
+letter_values()
+
+#14 return the first ten countries in the list countries
+def get_first_ten_countries(countries):
+    return countries[0:10]
+print(get_first_ten_countries(countries.countries))
+
+#15 return the last 10 countries in the list countries
+def get_last_ten_countries(countries):
+    return countries[-11:-1: 1]
+print(get_last_ten_countries(countries.countries))
+
+#Exercises: Level 3
+#1 Already done in the previous exercises
