@@ -23,13 +23,8 @@ import json
 
 #2 most spoken languages
 # python dictionary
-def ten_most_spoken_words():
-    pass
-# ten_most_spoken_words()
-# with open('countries_data.json', 'r') as speakers:
-#     languages = json.load(speakers)
-#     print(languages)
-with open("countries_data.json", 'r') as speakers:
-    languages = json.load(speakers)
-    print(languages)
-    
+# solved in other days
+# 2 and 3
+
+#Exercises: Level 2
+#4 Extracting email addressess
